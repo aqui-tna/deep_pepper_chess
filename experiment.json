@@ -1,0 +1,166 @@
+{
+  "name": "saikrishna-1996/deep_pepper_chess",
+  "url": "https://github.com/ aqui-tna/deep_pepper_chess",
+  "python_version": "3",
+  "requirements": {
+    "req_file": "requirements.txt",
+    "pip": [],
+    "others": []
+  },
+  "to_run": {
+      "decision": true,
+      "reason": null
+  },
+  "entries": [
+      {
+        "cmd": "python launch_script.py",
+        "main": "launch_script.py",
+        "steps": [
+            "training"
+        ],
+        "args_lib": "argparse",
+        "args": [
+          {
+              "names": [
+                  "--batch-size"
+              ],
+              "input": true,
+              "dest": "batch_size",
+              "ex_has_default": true,
+              "default": 25,
+              "type": "float",
+              "mandatory": false
+          },
+          {
+              "names": [
+                  "--epochs"
+              ],
+              "input": true,
+              "dest": "epochs",
+              "ex_has_default": true,
+              "default": 1,
+              "type": "float",
+              "mandatory": false
+          },
+          {
+              "names": [
+                  "--lr"
+              ],
+              "input": true,
+              "dest": "lr",
+              "ex_has_default": true,
+              "default": 0.0002,
+              "type": "float",
+              "mandatory": false
+          },
+          {
+              "names": [
+                  "--championship-rounds"
+              ],
+              "input": true,
+              "dest": "championship_rounds",
+              "ex_has_default": true,
+              "default": 10,
+              "type": "float",
+              "mandatory": false
+          },
+          {
+              "names": [
+                  "--checkpoint-path"
+              ],
+              "input": true,
+              "dest": "checkpoint_path",
+              "ex_has_default": false,
+              "default": null,
+              "type": "float",
+              "mandatory": false
+          },
+          {
+              "names": [
+                  "--data-path"
+              ],
+              "input": true,
+              "dest": "data_path",
+              "ex_has_default": true,
+              "default": "./data",
+              "type": "str",
+              "mandatory": false
+          },
+          {
+              "names": [
+                  "--workers"
+              ],
+              "input": true,
+              "dest": "workers",
+              "ex_has_default": true,
+              "default": 10,
+              "type": "float",
+              "mandatory": false
+          },
+          {
+              "names": [
+                  "--seed"
+              ],
+              "input": true,
+              "dest": "seed",
+              "ex_has_default": true,
+              "default": 1,
+              "type": "float",
+              "mandatory": false
+          },
+          {
+              "names": [
+                  "--no-cuda"
+              ],
+              "input": false,
+              "dest": "no_cuda",
+              "ex_has_default": true,
+              "default": true,
+              "type": "float",
+              "mandatory": false
+          },
+          {
+              "names": [
+                  "--pretrain"
+              ],
+              "input": false,
+              "dest": "pretrain",
+              "ex_has_default": true,
+              "default": true,
+              "type": "float",
+              "mandatory": false
+          }
+      ],
+        "ins": [
+            {
+            "type": "dir",
+            "location": "./data",
+            "artifact": "dataset",
+            "ex_from": "cmd",
+            "ex_in_repo": false
+            }
+        ],
+        "outs": [
+            {
+                "type": "dir",
+                "location": ".",
+                "artifact": "model",
+                "ex_from": "manual",
+                "ex_in_repo": true
+            }
+        ]
+        }
+    ],
+  "ex_metrics": {
+    "metrics_files": [],
+    "prints": [],
+    "plots": [],
+    "others": []
+  },
+  "ex_hyperparams": {
+    "from_cmd": ["batch_size", "epochs", "lr"],
+    "config_files": [],
+    "in_code": [],
+    "others": []
+  }
+}
