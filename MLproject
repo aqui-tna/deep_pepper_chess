@@ -1,0 +1,29 @@
+name: saikrishna-1996/deep_pepper_chess
+conda_env: conda_deep_pepper_chess.yaml
+entry_points:
+  step0_training:
+    parameters:
+      batch_size:
+        type: float
+        default: 25
+      epochs:
+        type: float
+        default: 1
+      lr:
+        type: float
+        default: 0.0002
+      championship_rounds:
+        type: float
+        default: 10
+      data_path:
+        type: str
+        default: ./data
+      workers:
+        type: float
+        default: 10
+      seed:
+        type: float
+        default: 1
+    command: python launch_script.py
+  main:
+    command: python ex_mlflow_multistep_main.py
