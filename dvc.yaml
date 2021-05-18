@@ -1,0 +1,13 @@
+stages:
+  step0_training:
+    cmd: python launch_script.py
+    params:
+    - batch_size
+    - epochs
+    - lr
+    - championship_rounds
+    - data_path
+    - workers
+    - seed
+    deps:
+    - launch_script.py
