@@ -1,0 +1,8 @@
+step0_training:
+  batch_size: 25
+  epochs: 1
+  lr: 0.0002
+  championship_rounds: 10
+  data_path: ./data
+  workers: 10
+  seed: 1
